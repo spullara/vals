@@ -1,5 +1,7 @@
 package spullara.vals;
 
+import org.junit.Test;
+
 import static spullara.vals.Vals.createVal;
 
 /**
@@ -10,7 +12,8 @@ public class ValsTest {
     return createVal("name" + System.currentTimeMillis());
   }
 
-  public static void main(String[] args) throws InterruptedException, NoSuchFieldException {
+  @Test
+  public void testAgent() throws InterruptedException, NoSuchFieldException {
     String first = name().get();
     System.out.println(first);
     Thread.sleep(10);
